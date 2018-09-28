@@ -26,7 +26,7 @@ void Persona::setUsuario(string u)
    usuario = u;
 }
 
-string Persona:::getUsuario()
+string Persona::getPassword()
 {
    return password;
 }
