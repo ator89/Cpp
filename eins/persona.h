@@ -9,7 +9,7 @@ class Persona
           string getUsuario();
           void setPassword(string p);
           string getPassword();
-          
+          Persona(){};
    private:
            string usuario;
            string password;
