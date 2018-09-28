@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#inlcude <vector>
 #include "persona.h"
 
 using namespace std;
@@ -12,6 +14,7 @@ int main()
   cout<< p.getUsuario();
   
   
+  string usuario="",password="";
   
   while(true)
   {
@@ -26,12 +29,19 @@ int main()
         switch(menu)
         {
            case 1:
+                
                 cout << "Ingreso al Sistema" << endl;
+                
+                cout <<"Usuario: ";
+                cin >> usuario;
+                cout << "Password: ";
+                cin >> password;
+                
+                
+                
                 break;
            case 2:
-                cout << "Opción inválida" << endl;
-                break;
-           case 0:
+                cout << "Registro" << endl;
                 break;
            default:
                 cout << "Opción inválida" << endl;
@@ -40,7 +50,7 @@ int main()
         
        
        }while(menu!=0);
-    
+       a = false;
                     
   }
   
