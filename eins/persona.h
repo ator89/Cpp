@@ -2,9 +2,13 @@
 
 using namespace std;
 
-class Persona()
+class Persona
 {
    public:
+          void setUsuario(string u);
+          string getUsuario();
+          void setPassword(string p);
+          string getPassword();
           
    private:
            string usuario;
@@ -12,4 +16,22 @@ class Persona()
       
 };
 
+string Persona::getUsuario()
+{
+   return usuario;     
+}
 
+void Persona::setUsuario(string u)
+{
+   usuario = u;
+}
+
+string Persona:::getUsuario()
+{
+   return password;
+}
+
+void Persona::setPassword(string p)
+{
+   password = p;     
+}

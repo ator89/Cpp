@@ -5,6 +5,11 @@ using namespace std;
 
 int main()
 {
+  Persona p;
+  p.setUsuario("Nombre");
+  cout<< p.getUsuario();
+  
+  
   
     
   system("pause");  
