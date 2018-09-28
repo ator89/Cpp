@@ -5,15 +5,35 @@
 
 using namespace std;
 
+vector<Persona> lista;
+int posU=0;
+
+int login(string u, string p)
+{
+   for (int i=0; i<lista.size();i++)
+   {
+       if(lista.at(i).getUsuario() == u && lista.at(i).getPassword() == p)
+       {
+          posU = i;
+          return 1;
+          
+       }
+   }
+   
+   return 0;
+}
+
 int main()
 {
   bool a = true;
   int menu = -1;
+  
   Persona p;
   p.setUsuario("Nombre");
   cout<< p.getUsuario();
   
-  vector<Persona> lista;
+  int n;
+  
   string usuario="",password="";
    
    do{
@@ -29,6 +49,19 @@ int main()
            case 1:
                 
                 cout << "Ingreso al Sistema" << endl;
+                
+                cout <<"Usuario: ";
+                cin >> usuario;
+                cout << "Password: ";
+                cin >> password;
+                
+                if(login(usuario,password)==1)
+                {
+                   cout << login <<endl;
+                   cout << posU<<endl;
+                   cout << "Bienvenido ";
+                   cout << lista.at(posU).getUsuario()<<endl;
+                }else{cout << "No existe ese ususario." << endl << endl;}
                 
                 
                 
@@ -46,11 +79,15 @@ int main()
                 lista.push_back(p);
                 break;
            case 3:
+                cout<<endl<<endl;
                 cout << "Lista de Usuarios" << endl;
                 for (int i=0; i<lista.size();i++)
                 {
                     cout << lista.at(i).getPassword()<<endl;
                 }
+                break;
+                cout<<endl<<endl;
+           case 4:
                 break;
            case 0:
                 break;
@@ -66,3 +103,5 @@ int main()
   system("pause");  
   return 0;
 }
+
+
