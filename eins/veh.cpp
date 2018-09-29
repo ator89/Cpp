@@ -1,11 +1,13 @@
 #include <iostream>
 #include "vehiculo.h"
+//#include "avion.h"
 
 using namespace std;
 
 int main()
 {
   Vehiculo v;
+  //Avion av;
   
   v.setSerie(456);
   

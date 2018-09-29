@@ -5,6 +5,7 @@ using namespace std;
 class Vehiculo
 {
   public:
+          
           string getModelo();
           void setModelo(string m);
           int getSerie();
@@ -15,6 +16,8 @@ class Vehiculo
           int serie;
                 
 };
+
+
 
 string Vehiculo::getModelo()
 {
