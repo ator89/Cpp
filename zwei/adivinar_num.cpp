@@ -17,7 +17,7 @@ int main()
      {
         cout << "\nIngrese un numero menor\n";
      }
-     if(num>dato)
+     if(num<dato)
      {
         cout << "\nIngrese un numero mayor";
      }
