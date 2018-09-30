@@ -26,6 +26,15 @@ int main()
      cout << endl;
   }
   
+  cout << "\nMatriz Transpuesta"<<endl;
+  for(int i=0; i<3;i++)
+  {
+     for(int j=0; j<3;j++)
+     {
+        cout << matriz[j][i];
+     }
+     cout << endl;
+  }
   
   
   system("pause");
