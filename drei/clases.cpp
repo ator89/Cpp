@@ -4,6 +4,10 @@ using namespace std;
 
 class Grupo{
    public:
+          explicit Grupo(string n) : nombre(n)
+          {
+          }
+          
           void setNombre(string n){
             nombre = n;
           }
@@ -23,12 +27,12 @@ class Grupo{
 
 int main()
 {
-  Grupo g;
+  Grupo g1("df");
+  //Grupo g;
+  //g.setNombre("hjjh");
   
-  g.setNombre("hjjh");
-  
-  g.mensaje();
-  
+  g1.mensaje();
+  //g.mensaje();
     
   system("pause");
   return 0;
