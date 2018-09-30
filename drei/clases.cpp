@@ -7,8 +7,13 @@ class Grupo{
           void setNombre(string n){
             nombre = n;
           }
-          string getNombre(){
+          string getNombre() const{
              return nombre;
+          }
+          
+          void mensaje() const
+          {
+               cout << "El nombre es: " << getNombre() <<endl; 
           }
           
    private:
@@ -18,5 +23,13 @@ class Grupo{
 
 int main()
 {
+  Grupo g;
+  
+  g.setNombre("hjjh");
+  
+  g.mensaje();
+  
+    
+  system("pause");
   return 0;
 }
