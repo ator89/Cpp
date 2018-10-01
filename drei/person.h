@@ -4,7 +4,12 @@ using namespace std;
 
 class Person{
    public:
-          
+         
+         void setEdad(int);
+         int getEdad() const;
+         
+         void setUsuario(string);
+         string getUsuario() const; 
           
           
           
@@ -13,3 +18,11 @@ class Person{
            string usuario;
 
 };
+
+void Person::setEdad(int){
+    setEdad(edad);
+}
+
+int Person::getEdad(){
+    return edad;      
+}
