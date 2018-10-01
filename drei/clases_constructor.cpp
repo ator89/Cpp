@@ -5,7 +5,7 @@ using namespace std;
 class Persona
 {
    public:
-          explicit Persona(sintr nombre) : nombreP(nombre)
+          explicit Persona(string nombre) : nombreP(nombre)
           {
           }
           
@@ -14,7 +14,7 @@ class Persona
                nombreP = nombre;
           }
           
-          string getNombreP() cons
+          string getNombreP() const
           {
              return nombreP;
           }
@@ -26,9 +26,16 @@ class Persona
           
    private:
            string nombreP;
-}
+};
 
 int main()
 {
+  Persona p1("Erste Name");  
+  Persona p2("Zweite Name");
+  
+  p1.showMessage();
+  p2.showMessage();
+  
+  system("pause");
   return 0;
 }
