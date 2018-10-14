@@ -9,6 +9,7 @@ int main()
   char c [3][3];
   
   loop(c);//llamar a todas las funciones fundamentales y refresca pantalla.
+  std::cout << std::endl;
   
   system("pause");
   return 0;
