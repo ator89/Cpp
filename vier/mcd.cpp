@@ -4,8 +4,8 @@
 using namespace std;
 
 int mcd(int a, int b){
-   if(b==0) return b;
-   else mcd(b,a%b);
+   if(b==0) return a;
+   else return mcd(b,a%b);
 }
 
 int main()
@@ -25,11 +25,14 @@ int main()
   }while(a<0);
   
   do{
-     cout << "";
+     cout << "Ingrese segundo numero";
      cin >> b;
      
      if(b<0) cout << "Debe ser positivo...\n";
   }while (b<0);
+  
+  if(a>b) cout << "mcd(a,b)"<<mcd(a,b);
+  else if(b>a) cout << "mcd(b,a)"<<mcd(b,a);
   
   getch();
   return 0;
