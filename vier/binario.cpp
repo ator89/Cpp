@@ -15,7 +15,7 @@ int main()
   int n;
   
   do{
-     cout << "Ingrese un numberi";
+     cout << "Ingrese un numbero";
      cin >> n;
      
      if(n<0){
