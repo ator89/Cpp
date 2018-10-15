@@ -21,7 +21,7 @@ int main()
 
 void loop (char c[3][3]){
     
-    int i;
+    int i,j;
     i=0;
     
     intro_primera(c);
@@ -35,10 +35,11 @@ void loop (char c[3][3]){
        }else{
        intro_AI(c);
        }
-       
+       j=ganador(c);
        i++;
     }while(i<=9);
     
+    /*
     if (j ==1){
        printf("Winner");
     }
@@ -46,7 +47,7 @@ void loop (char c[3][3]){
        printf("Perdiste!");     
     }else{
        printf("Empate");
-    }
+    }*/
 }
 
 /*
@@ -243,8 +244,25 @@ int ganador(char c[3][3]){
            }else{
                return 1;
            }
-       } 
+       }
+       
+       
+       if(c[2][2]== 'X' || c[2][2]=='o'){
+           if(c[2][2] == c[2][0] && c[2][2] == c[2][1]){
+               if(c[0][0] == 'X'){
+                   return 0;
+               }else{
+                   return 1;
+               }
+           }
+           if(c[2][2] == c[0][2] && c[2][2] == c[1][2]){
+               if(c[0][0] == 'X'){
+                   return 0;
+               }else{
+                   return 1;
+               }
+           }
+       }
    }
-   
-   
+   return 2;   
 }
