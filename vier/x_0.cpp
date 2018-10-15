@@ -6,6 +6,7 @@ void intro_primera(char c[3][3]);
 void tablero(char c[3][3]);
 void intro_yo(char c[3][3]);
 void intro_AI(char c[3][3]);
+int ganador(char c[3][3]);
 
 int main()
 {
@@ -37,6 +38,15 @@ void loop (char c[3][3]){
        
        i++;
     }while(i<=9);
+    
+    if (j ==1){
+       printf("Winner");
+    }
+    else if(j==1){
+       printf("Perdiste!");     
+    }else{
+       printf("Empate");
+    }
 }
 
 /*
@@ -185,4 +195,9 @@ void tablero(char c[3][3]){
       }
    }
    std::cout << std::endl;
+}
+
+int ganador(char c[3][3]){
+   
+
 }
