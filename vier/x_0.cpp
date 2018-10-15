@@ -229,7 +229,21 @@ int ganador(char c[3][3]){
            }else{
                return 1;
            }
-       }           
+       }
+       if(c[1][1] == c[2][0] && c[1][1]==c[0][2]){
+           if(c[0][0] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       }
+       if(c[1][1] == c[0][1] && c[1][1]==c[2][1]){
+           if(c[0][0] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       } 
    }
    
    
