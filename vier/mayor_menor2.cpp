@@ -5,24 +5,23 @@ using namespace std;
 
 int main()
 {
-  int mayor, menor;
-  int array[5]={0,0,0,0,0};
+  int num, mayor, menor;
   
   for (int i=0; i<=4;i++){
-     cout << "Ingrese un numero" <<endl;
-     cin >>array[i];
+     cout << "numero: ";
+     cin >> num; 
      
-     
-     if ( array[i] > mayor){
-        mayor = array[i];
+     if(i==0){
+        mayor=num;
+        menor=num;
      }
-     
-     if( array[i]<menor){
-        menor = array[i];
+     else{
+          if (num > mayor ) mayor = num;
+          if (num < menor ) menor = num;
      }
-  }  
+  }
   
-  cout << mayor <<endl;
+  cout << mayor << endl;
   cout << menor << endl;
   
   getch();

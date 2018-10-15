@@ -6,12 +6,11 @@ using namespace std;
 int main()
 {
   int mayor, menor;
-  int array[5]={0,0,0,0,0};
+  int array[5];
   
   for (int i=0; i<=4;i++){
      cout << "Ingrese un numero" <<endl;
      cin >>array[i];
-     
      
      if ( array[i] > mayor){
         mayor = array[i];
