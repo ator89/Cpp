@@ -33,21 +33,24 @@ void loop (char c[3][3]){
        if(i%2 ==0){
            intro_yo(c);
        }else{
-       intro_AI(c);
+           intro_AI(c);
        }
        j=ganador(c);
        i++;
-    }while(i<=9);
+    }while(i<=9 && j==2);
     
-    /*
-    if (j ==1){
-       printf("Winner");
-    }
-    else if(j==1){
+    system("cls");
+    tablero(c);
+    
+    if(j == 0){
+       printf("Winner!\n\n");
+    }else if(j==1){
        printf("Perdiste!");     
     }else{
        printf("Empate");
-    }*/
+    }
+    
+    
 }
 
 /*
@@ -225,21 +228,21 @@ int ganador(char c[3][3]){
            }
        }
        if(c[1][1] == c[1][0] && c[1][1]==c[1][2]){
-           if(c[0][0] == 'X'){
+           if(c[1][1] == 'X'){
                return 0;
            }else{
                return 1;
            }
        }
        if(c[1][1] == c[2][0] && c[1][1]==c[0][2]){
-           if(c[0][0] == 'X'){
+           if(c[1][1] == 'X'){
                return 0;
            }else{
                return 1;
            }
        }
        if(c[1][1] == c[0][1] && c[1][1]==c[2][1]){
-           if(c[0][0] == 'X'){
+           if(c[1][1] == 'X'){
                return 0;
            }else{
                return 1;
@@ -249,14 +252,14 @@ int ganador(char c[3][3]){
        
        if(c[2][2]== 'X' || c[2][2]=='o'){
            if(c[2][2] == c[2][0] && c[2][2] == c[2][1]){
-               if(c[0][0] == 'X'){
+               if(c[2][2] == 'X'){
                    return 0;
                }else{
                    return 1;
                }
            }
            if(c[2][2] == c[0][2] && c[2][2] == c[1][2]){
-               if(c[0][0] == 'X'){
+               if(c[2][2] == 'X'){
                    return 0;
                }else{
                    return 1;
