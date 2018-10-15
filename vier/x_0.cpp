@@ -198,6 +198,39 @@ void tablero(char c[3][3]){
 }
 
 int ganador(char c[3][3]){
+   if( c[0][0] == 'X' || c[0][0]=='o'){
+       if( c[0][0] == c[0][1] && c[0][0] == c[0][2]){
+           if(c[0][0] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       }
+       if(c[0][0]==c[1][0] && c[0][0] == c[2][0]){
+           if(c[0][0] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       }
+   }
    
-
+   if(c[1][1] == 'X' || c[1][1] == 'o'){
+       if(c[1][1] == c[0][0] && c[1][1] == c[2][2]){
+           if(c[1][1] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       }
+       if(c[1][1] == c[1][0] && c[1][1]==c[1][2]){
+           if(c[0][0] == 'X'){
+               return 0;
+           }else{
+               return 1;
+           }
+       }           
+   }
+   
+   
 }
