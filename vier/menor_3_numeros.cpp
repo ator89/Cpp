@@ -7,7 +7,6 @@ int main()
 {
   int a, b, c, d, menor=0;
   
-  
      cout << "A: "<< endl;
      cin >> a;
      cout << "B: "<< endl;
@@ -23,7 +22,7 @@ int main()
         menor = c;
      }
   
-  d=menor;
+  d = menor;
   cout << d<< endl;
   
   getch();
