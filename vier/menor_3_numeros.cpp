@@ -7,15 +7,24 @@ int main()
 {
   int a, b, c, d, menor=0;
   
-  for ( int=1 ; i<=3 ; i++ ){
-     cout << "Numero: "<< endl;
+  
+     cout << "A: "<< endl;
+     cin >> a;
+     cout << "B: "<< endl;
+     cin >> b;
+     cout << "B: "<< endl;
+     cin >> c;
      
-     if(a < menor){
+     if(a < b && a<c){
         menor = a;
-     }else if(b<menor){
-        
+     }else if(b<a && b<c){
+        menor = b;
+     }else{
+        menor = c;
      }
-  }
+  
+  d=menor;
+  cout << d<< endl;
   
   getch();
   return 0;
