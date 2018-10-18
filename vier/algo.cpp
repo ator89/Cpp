@@ -19,5 +19,4 @@ void arreglo(char arreglo[],int size){
    for (int i = 0; i <= size; i++){
       cout << " " << arreglo[i] << endl;
    }  
-   
 }
