@@ -1,11 +1,15 @@
 #include <iostream>
+#include <string>
+using std::string;
 
 using namespace std;
 
 void arreglo(char[],int);
 
+
 int main()
 {
+  string cadena[];
   char arr[] = {'a','r','n','m','k','h','f','d','r'};
   cout << "Algo" << endl;
   
