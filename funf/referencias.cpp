@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void suma1(int n){
+int suma1(int n){
   return n+1;     
 }
 
@@ -12,10 +12,11 @@ void incrementa1(int &n){
 
 int main()
 {
-  int a=1, b=2; c;
+  int a=1, b=2, c;
   
-  c=suma1(a);
-  incrementar1(b);
+  c=suma1(4);
+  incrementa1(b);
+  incrementa1(c);
   
   cout << c << ' ' << b << endl;
   
