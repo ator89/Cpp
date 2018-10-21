@@ -3,18 +3,14 @@
 using namespace std;
 
 int main(){
-   int i;
-   for ( i = 100; i <= 999; i++ ){
-       int c, d, u;
-
-       c = i / 100;
-       d = ( i / 10 ) % 10;
-       u = i % 10;
-
-       if(c + d == u){
-           cout << i << ' ' ;
+   int i,j;
+   for ( i = 0; i <= 9; i++ ){
+       //cout << "xx" << i << ' ';
+       for ( j = 0; j <= i; j++ ){
+           if ( i -j > 0 ) cout << (i - j) << j << i << ' ';
        }
    }
+   cout << endl;
 
    return 0;
 }
