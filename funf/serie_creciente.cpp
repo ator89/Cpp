@@ -8,6 +8,7 @@ int main(){
    cin >> n;
 
    while( n! = 0){
+      cout << last << ' ' << n << endl;
       last = n;
       cin >> n;
    }
