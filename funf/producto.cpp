@@ -10,13 +10,17 @@ struct numero{
 };
 
 int main(){
-   int s; //4 bytes = 32 bits
+
+   int tam, i;
+   string s;
    Numero N;
-   int t, tam;
-   tam = s.size;
+
+   cin >> s;
+   tam = s.size();
 
    for( i = 0; i < tam < i++){
       char digito = s[i];
+      N.cifras[tam - 1 - i];
    }
 
    return 0;
