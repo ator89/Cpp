@@ -14,6 +14,7 @@ struct Numero{
 
 void leer_numero(Numero&);
 void escribir_numero(const Numero&);
+void suma(const Numero& A, const Numero& B, Numero& R);
 
 int main(){
 
@@ -44,4 +45,8 @@ void leer_numero(Numero& N){
       N.cifras[tam - 1 - i] = int(digito) - int('0');
    }
    N.ncifras = tam;
+}
+
+void suma(const Numero& A, const Numero& B, Numero& R){
+
 }
