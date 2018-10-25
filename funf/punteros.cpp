@@ -20,6 +20,18 @@ int main(){
     p = p +1;
     cout << *(p+1) << endl;
 
+    cout << endl << endl;
+
+    int h[3] = { -1, 7, 4};
+    int *pp;
+    pp = h; // &h[0] => h
+    *pp = 3;
+    *(pp+1) = -299;
+    h[2] = 15;
+
+    for (int j = 0; j < 3; j++ ){
+        cout << h[j] << " " << endl;
+    }
 
     return 0;
 }
