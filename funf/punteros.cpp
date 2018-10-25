@@ -26,8 +26,11 @@ int main(){
     int *pp;
     pp = h; // &h[0] => h
     *pp = 3;
-    *(pp+1) = -299;
+    *(pp+1) = -2; // h[1] = -2;
     h[2] = 15;
+
+    pp = &h[2];
+    pp[0] = 44;
 
     for (int j = 0; j < 3; j++ ){
         cout << h[j] << " " << endl;
