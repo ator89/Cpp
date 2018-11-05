@@ -35,3 +35,16 @@ void initBF(){
     }
 }
 
+
+void freeMem(){
+    for(int i = 0; i < size; i++){
+        for(int j = 0; j < size; j++){
+            delete[] cubo[i][j];
+            cubo[i][j]=NULL;
+        }
+    }
+    for(int i = 0; i < size; i++){
+        delete[] cubo[i];
+    }
+    delete[] cubo;
+}
