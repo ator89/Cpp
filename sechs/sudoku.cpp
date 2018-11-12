@@ -75,6 +75,7 @@ bool Sudoku::asigna(int k, int val){
 
 //Eliminar un valor
 bool Sudoku::elimina(int k, int val){
+   cout << "Elimina("<<k<<','<<val<<')'<<endl;
    if(!_celdas[k].activo(val)){
       return true;
    }
@@ -84,13 +85,14 @@ bool Sudoku::elimina(int k, int val){
     return false;
    }else if (N == 1){
    	const int v2 = _celdas[k].val();
-	for(int kp = 0; kp < _vecinos[k].size(); kp++){
-	   if(!elimina(kp,v2)) return false;
+	for(int i = 0; i < _vecinos[k].size(); i++){
+           
+	   if(!elimina(_vecinos[k][i], v2)) return false;
 	}
    }
    for( int x = 0; x < 3; x++){
       const int g = _grupos_de[k][x];
-      int n = 0; int k2;
+      int n = 0,  k2;
       for ( int i = 0; i < 9; i++){
          const int kp = _grupos[g][i];
 	 if(_celdas[kp].activo(val)){
@@ -177,7 +179,7 @@ void Sudoku::inicializa(){
 
 int main(){
    Sudoku::inicializa();
-   Sudoku S("4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......");
+   Sudoku S("00302060090030500100180640000810290070000000800670820000260950080020300900501030");
    S.escribe(cout);
    
    Posibles p;
