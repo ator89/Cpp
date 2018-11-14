@@ -81,7 +81,7 @@ int Persona::getTelefono(){
     return this -> telefono;
 }
 
-void Persona::setDirecciont(string direccion){
+void Persona::setDireccion(string direccion){
     this -> direccion = direccion;
 }
 

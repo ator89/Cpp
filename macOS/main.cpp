@@ -12,7 +12,7 @@ using std::vector;
 
 //Menú principal
 void menu();
-void menuUsuario();//Menú de usuario ingresado
+void menuUsuario(string);//Menú de usuario ingresado
 
 
 int main(){
@@ -36,4 +36,15 @@ void menu(){
         << "0 - Salir" << endl
         << "Ingrese una opción: ";
     cout << endl;
+}
+
+void menuUsuario(string user){
+    cout << "\tWelcome " << user << endl << endl
+        << "1 - Agregar" << endl
+        << "2 - Listar" << endl
+        << "3 - Modificar" << endl
+        << "4 - Eliminar" << endl
+        << "5 - Otros" << endl
+        << "0 - Log Out" << endl
+        << "Ingrese una opción: ";
 }
