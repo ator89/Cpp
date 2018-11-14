@@ -88,10 +88,10 @@ int main(){
                                         //Hobbie h1,h2;
                                         //h1.setHobbie(new Hobbie("H",4));
                                         lista.at(us)->setHobbie(h1);
-                                        //lista.at(us)->setHobbie(&h2);
+                                        lista.at(us)->setHobbie(h2);
                                         for(int i = 0; i < 
                                             lista.at(us)->getListaHobbies().size(); i++) {
-                                            
+                                            cout << lista.at(us)->getListaHobbies()[i]->getHobbie();
                                         }
                                     }//End case 5
                                         break;
