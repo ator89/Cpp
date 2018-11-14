@@ -60,8 +60,14 @@ int main(){
                                 switch(menu2){
                                     case 1:
                                         break;
-                                    case 2:
-                                        break;
+                                    case 2:{//Listar usuarios
+                                        cout << "Lista de usuarios registrados "<< endl;
+                                        for(int i = 0; i < lista.size(); i++){
+                                            cout << i << " - " << lista.at(i)->getUser()
+                                                    << endl;
+                                        }
+                                    }    
+                                    break;
                                     case 3:
                                         break;
                                     case 4:
