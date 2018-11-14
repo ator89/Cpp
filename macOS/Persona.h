@@ -1,6 +1,7 @@
 #ifndef PERSONA_H
 #define PERSONA_H
 
+#include "Hobbie.h"
 #include <string>
 using std::string;
 
@@ -12,7 +13,7 @@ class Persona{
     private:
         string user, password, nombre, apellido, direccion;
         int edad, telefono;
-        //vector<string> listaHobbies;
+        vector<Hobbie> listaHobbies;
     public:
         //Constructores y destructor
         Persona();
@@ -41,6 +42,10 @@ class Persona{
 
         void setDireccion(string);
         string getDireccion();
+
+        void setListaHobbies(vector<Hobbie>);
+        vector<Hobbie> getListaHobbies();
+        void setHobbie(Hobbie);
 };
 
 #endif

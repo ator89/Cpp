@@ -1,7 +1,11 @@
 #include "Persona.h"
+#include "Hobbie.h"
 
 #include <string>
 using std::string;
+
+#include <vector>
+using std::vector;
 
 //Constructor por defecto
 Persona::Persona(){
@@ -12,6 +16,7 @@ Persona::Persona(){
     this->direccion = "";
     this->edad = 0;
     this->telefono = 0;
+    this->listaHobbies = vector<Hobbie>();
 }
 
 //Constructor sobrecargado usuario y password
@@ -87,4 +92,16 @@ void Persona::setDireccion(string direccion){
 
 string Persona::getDireccion(){
     return this -> direccion;
+}
+
+void Persona::setListaHobbies(vector<Hobbie> listaHobbies){
+    this-> listaHobbies = listaHobbies;
+}
+
+vector<Hobbie> Persona::getListaHobbies(){
+    return this -> listaHobbies;
+}
+
+void Persona::setHobbie(Hobbie hobbie){
+    this-> listaHobbies.push_back(hobbie);
 }

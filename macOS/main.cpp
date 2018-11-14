@@ -1,4 +1,5 @@
 #include "Persona.h"
+#include "Hobbie.h"
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -19,7 +20,8 @@ int main(){
      
     Persona* p;
     vector<Persona*> lista;
-    
+    vector<Hobbie*> hobs;    
+
     string user, userL, password, passwordL;
     int posUser = 0;    
 
@@ -58,7 +60,7 @@ int main(){
                                 menuUsuario(lista.at(posUser)->getUser());
                                 cin >> menu2;
                                 switch(menu2){
-                                    case 1:
+                                    case 1://
                                         break;
                                     case 2:{//Listar usuarios
                                         cout << "Lista de usuarios registrados "<< endl;
@@ -72,7 +74,26 @@ int main(){
                                         break;
                                     case 4:
                                         break;
-                                    case 5:
+                                    case 5:{//Test otros
+                                        int us = 0;
+                                        for ( int i = 0; i < lista.size(); i++){
+                                            cout << i << " - " << lista.at(i)->getUser() 
+                                                << endl; 
+                                        }
+                                        cout << "Seleccione un usuario: "; cin >> us;
+                                        
+                                        //Hobbie* h1 = new Hobbie("Guitarra",34);
+                                        //Hobbie* h2 = new Hobbie("Correr",13);
+                                        //hobs = new Hobbie("N",4);               
+                                        //Hobbie h1,h2;
+                                        //h1.setHobbie(new Hobbie("H",4));
+                                        //lista.at(us)->setHobbie(h1);
+                                        //lista.at(us)->setHobbie(&h2);
+                                        for(int i = 0; i < 
+                                            lista.at(us)->getListaHobbies().size(); i++) {
+                                            
+                                        }
+                                    }//End case 5
                                         break;
                                     case 0:
                                         cout << "Cerrando sesión..." << endl << endl;
