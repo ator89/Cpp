@@ -16,7 +16,7 @@ Persona::Persona(){
     this->direccion = "";
     this->edad = 0;
     this->telefono = 0;
-    this->listaHobbies = vector<Hobbie>();
+    this->listaHobbies;
 }
 
 //Constructor sobrecargado usuario y password
@@ -94,14 +94,15 @@ string Persona::getDireccion(){
     return this -> direccion;
 }
 
-void Persona::setListaHobbies(vector<Hobbie> listaHobbies){
+
+void Persona::setListaHobbies(vector<Hobbie*> listaHobbies){
     this-> listaHobbies = listaHobbies;
 }
 
-vector<Hobbie> Persona::getListaHobbies(){
+vector<Hobbie*> Persona::getListaHobbies(){
     return this -> listaHobbies;
 }
 
-void Persona::setHobbie(Hobbie hobbie){
+void Persona::setHobbie(Hobbie* hobbie){
     this-> listaHobbies.push_back(hobbie);
 }
