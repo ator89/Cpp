@@ -16,17 +16,17 @@ void menuUsuario(string);//Menú de usuario ingresado
 
 
 int main(){
-    
+     
     Persona* p;
     vector<Persona*> lista;
     
     string user, userL, password, passwordL;
     int posUser = 0;    
 
-    bool m1 = false;
+    bool m1 = true;
     int menu1 = -1;
 
-    bool m2 = false;
+    bool m2 = true;
     int menu2 = -1;
    
     while(m1){
@@ -59,8 +59,15 @@ int main(){
                     
                 }//Fin case 1
                     break;
-                case 2:{
+                case 2:{//Registrar usuarios
+                    cout << "\tRegistro de Usuarios"<< endl;
+                    cout << "Ingrese su usuario: "; cin >> user;
+                    cout << "Ingrese su password: "; cin >> password;
+
+                    p = new Persona(user, password);
+                    lista.push_back(p);
                     
+                    cout << "Registrado con éxito." << endl << endl;
                 }//Fin case 2
                     break;
                 case 0:
