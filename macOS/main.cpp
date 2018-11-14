@@ -38,6 +38,7 @@ int main(){
             switch(menu1){
                 case 1:{//Login
                     bool esta = false;
+                    m2 = true;
                     cout << "Usuario: "; cin >> userL;
                     cout << "Password: "; cin >> passwordL;
 
@@ -52,10 +53,37 @@ int main(){
                     
                     //Menú para usuario existentes
                     if(esta){
-                        menuUsuario(userL);
+                        while(m2){
+                            do{
+                                menuUsuario(lista.at(posUser)->getUser());
+                                cin >> menu2;
+                                switch(menu2){
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        break;
+                                    case 4:
+                                        break;
+                                    case 5:
+                                        break;
+                                    case 0:
+                                        cout << "Cerrando sesión..." << endl << endl;
+                                        posUser = 0;
+                                        break;
+                                    default:
+                                        cout << "Opción inválida" << endl << endl;
+                                        break;
+
+                                }//Final switch menu usuario ingresado
+                            }while(menu2 != 0); 
+                            m2 = false;
+                        }//End while menu de usuario ingresado
+                       
                     }else{
                         cout << "No existe el usuario." << endl;
-                    }
+                    }//Final else si el usuario no existe
                     
                 }//Fin case 1
                     break;
