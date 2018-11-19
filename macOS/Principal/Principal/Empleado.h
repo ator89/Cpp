@@ -9,5 +9,13 @@
 #ifndef Empleado_h
 #define Empleado_h
 
+class Empleado : public Usuario{
+    private:
+        int id;
+    public:
+        Empleado();
+        ~Empleado();
+
+};
 
 #endif /* Empleado_h */

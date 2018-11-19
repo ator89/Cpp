@@ -7,3 +7,14 @@
 //
 
 #include <stdio.h>
+
+#include <string>
+using std::string;
+
+Usuario::Usuario(){
+
+}
+
+Usuario::~Usuario(){
+
+}
