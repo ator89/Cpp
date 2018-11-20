@@ -46,9 +46,10 @@ void** New::crearTablero(){
 }
 
 New::~New(){
-    //if(tablero !=NULL){
+    if(tablero !=NULL){
     freeUp();
-    //};
+    cout << "Vaciado correctamente" << endl;
+    };
 }
 
 void New::freeUp(){
