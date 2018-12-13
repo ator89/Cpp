@@ -1,8 +1,6 @@
 //#include "Persona.h"
 #include "Usuario.h"
 #include "AdminUsuario.h"
-#include "AdminMenu.h"
-#include "Tablero.h"
 
 #include <iostream>
 using std::cout;
@@ -13,19 +11,12 @@ using std::cin;
 
 int main(){
 
-
-	AdminMenu m;
-	AdminUsuario* au = new AdminUsuario();
-    Usuario* user;
-    Tablero* mat = new Tablero();
-
-    string usuario, password, nom;
-    bool men = true;
-    int opcion = -1;
-    int posUsuario = 0;
+    //Persona* p = new Persona();
+    //Persona* p1 = new Usuario();
 
     Usuario* u = new Usuario();
     Usuario* p = new Usuario();
+    //p1->setNombre("p1");
 
     u->setUsuario("usuario");
     u->setNombre("usuario_nombre");
@@ -35,37 +26,39 @@ int main(){
 
     p->setNombre("NombreP");
     cout << u->getNombre() << endl;
+    //cout << p1->getNombre() << endl;
     cout << u->getId() << endl;
 
-    
+    AdminUsuario* au = new AdminUsuario();
+    Usuario* user;
     au->addUsuario(u);
     au->addUsuario(p);
     au->mostrarUsuarios();
     
-    
+    string usuario, password, nom;
+    bool men = true;
+    int opcion = -1;
+    int posUsuario = 0;
 
     while(men){
         do{
-        	m.menu();
             //menu();
             cin >> opcion;
             switch(opcion){
-                case 1:{//Login
+                case 1://Login
                     cout << "Usuario: "; cin >> usuario;
                     cout << "Password: "; cin >> password;
 
                     posUsuario = au->posUser(usuario);
 
                     if(au->login(usuario,password)){  
-                        cout << "Welcome " 
-                            << au->getListaUsuarios().at(posUsuario)->getUsuario() << endl;
-                        
-                        m.menuUsuario();
-
+                        cout << "Welcome!!" 
+                            << au->getListaUsuarios().at(posUsuario)->getUsuario() <<endl;
+                        //menuUsuario();
                     }else{
-                        cout << "No existe ese usuario." << endl << endl;
+                        cout << "No existe" << endl << endl;
                     }
-                }   break;
+                    break;
                 case 2:{//Registar
                     
                     cout << "Ingrese un usuario: " << endl; cin >>usuario;
@@ -80,9 +73,6 @@ int main(){
                     break;
                 case 3://Test
                     au->mostrarUsuarios();
-                    mat->crearMatriz();
-                    mat->llenarMatriz();
-                    mat->printMatriz();
                     break;
                 case 0://salir
                     cout << "Saliendo..." << endl;
@@ -99,4 +89,6 @@ int main(){
 
     return 0;
 }
+
+
 

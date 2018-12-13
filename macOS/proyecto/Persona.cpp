@@ -1,5 +1,7 @@
 #include "Persona.h"
 
+#include <iostream>
+
 Persona::Persona(){
     this->edad = 0;
     this->nombre = "";
@@ -40,5 +42,5 @@ void Persona::setApellido(string _apellido){
 }
 
 Persona::~Persona(){
-
+    std::cout<< "Liberando persona" << std::endl; 
 }

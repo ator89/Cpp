@@ -1,5 +1,7 @@
 #include "Usuario.h"
 
+#include <iostream>
+
 Usuario::Usuario(){
     this->usuario = "";
     this->password = "";
@@ -35,5 +37,5 @@ void Usuario::setPassword(string _password){
 }
 
 Usuario::~Usuario(){
-        
+    std::cout << "Liberando usuario.." << std::endl;
 }

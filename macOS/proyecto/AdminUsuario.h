@@ -13,10 +13,13 @@ class AdminUsuario{
         AdminUsuario();
         ~AdminUsuario();
 
-        int posUser(Usuario*);
+        int posUser(string);
         bool login(string,string);
         void mostrarUsuarios(); 
         void addUsuario(Usuario*);
+        vector<Usuario*> getListaUsuarios();
+        void setListaUsuarios(vector<Usuario*>);
+        
 };
 
 
