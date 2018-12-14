@@ -43,7 +43,8 @@ HEADERS += \
     Usuario.h \
     Orden.h \
     Producto.h \
-    Persona.h
+    Persona.h \
+    login.h
 
 FORMS += \
         mainwindow.ui \
