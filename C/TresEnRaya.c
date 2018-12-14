@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-void loop(char c[3][3]);
+int ganador(char[3][3]);
+void loop(char[3][3]);
 void Intro_Primera(char[3][3]);
 void tablero(char[3][3]);
 void Intro_Yo(char[3][3]);
@@ -29,9 +29,9 @@ void loop (char c[3][3]){
     tablero(c);
     Intro_Yo(c);
     tablero(c);*/
-    int i;
+    int i,j;
     i = 0;
-
+    
     Intro_Primera(c);
     
     do{
@@ -40,14 +40,23 @@ void loop (char c[3][3]){
         
         if (i%2 == 0){
             Intro_Yo(c);
-        }else{
-           
-            i++; 
+        }else{ 
             Intro_IA(c);
         }
-        
+        j = ganador(c);        
         i++;
-    }while(i <= 9);
+    }while(i <= 9 && j ==2);
+
+    system("clear");
+    tablero(c);
+    if(j==0){
+        printf("IW!!\n\n");
+    }else if(j==1){
+        printf("Wasted!!\n\n");
+    }
+    else{
+        printf("Empate!!\n\n");
+    }
 }
 
 void Intro_Primera (char c[3][3]){
@@ -203,3 +212,83 @@ void tablero(char c[3][3]){
     }//end for i
     printf("\n\n");
 }//end tablero
+
+int ganador(char c[3][3]){
+    if(c[0][0] == 'X' || c[0][0] == 'O'){
+        if(c[0][0] == c[0][1] && c[0][0] == c[0][2]){
+            if(c[0][0] == 'X'){
+                return 0; //Win
+            }
+            else{
+                return 1; //Wasted
+            }
+        }
+        if(c[0][0] == c[1][0] && c[0][0] == c[2][0]){
+            if(c[0][0] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+    } 
+
+    if(c[1][1] == 'X' || c[1][1] == 'O'){
+        //1-5-9
+        if(c[1][1] == c[0][0] && c[1][1] == c[2][2]){
+            if(c[1][1] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+        //4-5-6
+        if(c[1][1] == c[1][0] && c[1][1] == c[1][2]){
+            if(c[1][1] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+        //2-5-8
+        if(c[1][1] == c[0][1] && c[1][1] == c[2][1]){
+            if(c[1][1] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+        //3-5-7
+        if(c[1][1] == c[0][2] && c[1][1] == c[2][0]){
+            if(c[1][1] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+    }
+    if(c[2][2] == 'X' || c[2][2] == 'O'){
+        if(c[2][2] == c[2][0] && c[2][1] == c[2][1]){
+            if(c[2][2] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+        
+        if(c[2][2] == c[0][2] && c[2][2] == c[1][2]){
+            if(c[2][2] == 'X'){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+    }
+    return 2;
+}
