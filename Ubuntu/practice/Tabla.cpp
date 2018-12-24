@@ -47,6 +47,15 @@ void Tabla::llenarTabla(){
     }
 }
 
+void Tabla::mover(int x,int y,int a,int b){
+    for(int i = 0; i < 8; i++){
+        for(int j = 0; j < 8; j++){
+            matriz[x][y] = "__";
+            matriz[a][b] = "PN";
+        }
+    }
+}
+
 void Tabla::imprimirTabla(){
     for(int i = 0; i < 8; i++){
         for( int j = 0; j < 8; j++){

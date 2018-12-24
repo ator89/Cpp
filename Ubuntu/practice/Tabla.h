@@ -15,7 +15,8 @@ class Tabla{
         void llenarTabla();
         void imprimirTabla();
         void limpiarTabla();
-        
+       
+        void mover(int,int,int,int); 
 };
 
 #endif
