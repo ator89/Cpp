@@ -16,12 +16,12 @@ void AdminPersona::addUsuario(Usuario* usuario){
 }
 
 //Función para log in
-bool AdminPersona::login(string _usuario, string password){
+bool AdminPersona::login(string _usuario, string _password){
    for(int i = 0; i < listaUsuarios.size(); i++){
-        if(listaUsuarios.at(i)->getUsuario().compare(_usuario) == 0){
+        if(listaUsuarios.at(i)->getUsuario().compare(_usuario) == 0
+                && listaUsuarios.at(i)->getPassword().compare(_password) == 0){
             return true;
-        }
-        
+        }    
     } 
     return false;
 }

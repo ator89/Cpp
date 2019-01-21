@@ -1,6 +1,8 @@
 #include "Usuario.h"
 
+#include <iostream>
 #include <string>
+using std::string;
 
 //Constructor 
 Usuario::Usuario(){
@@ -15,11 +17,11 @@ Usuario::Usuario(std::string usuario, std::string password){
 }
 
 //Setters
-void setUsuario(std::string usuario){
+void Usuario::setUsuario(std::string usuario){
     this->usuario = usuario;
 }
 
-void setPassword(std::string password){
+void Usuario::setPassword(std::string password){
     this->password = password;
 }
 
@@ -34,5 +36,5 @@ std::string Usuario::getPassword(){
 
 //Destructor
 Usuario::~Usuario(){
-    std::cout << "Destruyendo usuario..." << endl;
+    std::cout << "Destruyendo usuario..." << std::endl;
 }
