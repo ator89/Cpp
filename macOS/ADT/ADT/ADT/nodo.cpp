@@ -14,24 +14,28 @@ using std::endl;
 #include "nodo.h"
 
 Nodo::Nodo(){
-    this->data = 0;
+    //this->persona = NULL;
     this->next = NULL;
 }
 
-void Nodo::add(Nodo** node, int valor){
+void Nodo::add(Nodo** node, Persona valor){
     Nodo* temp = new Nodo();
-    temp->data = valor;
+    temp->persona = valor;
     temp->next = NULL;
     if(*node != NULL) temp->next = *node;
     *node = temp;
 }
 
 void Nodo::print(Nodo* node){
-    cout << "Valor: " << endl;
+    int i = 1;
+    cout << "Usuarios: " << endl;
     while(node!=nullptr){
-        cout << " " << node ->data;
+        cout << i << " " << node ->persona.getId() << " - " <<
+                            node->persona.getUsuario()<< endl;
         node = node->next;
+        i++;
     }
+    cout << "\n";
 }
 
 Nodo::~Nodo(){

@@ -8,17 +8,19 @@
 
 #ifndef nodo_h
 #define nodo_h
+#include "persona.h"
 
 class Nodo{
     
 private:
-    int data;
+    //int data;
+    Persona persona;
     Nodo* next;
 public:
     Nodo();
     ~Nodo();
     
-    void add(Nodo**,int);
+    void add(Nodo**,Persona);
     void print(Nodo*);
     
 };
