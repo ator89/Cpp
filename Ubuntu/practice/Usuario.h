@@ -3,23 +3,24 @@
 
 #include "Persona.h"
 #include <string>
+using std::string;
 
 class Usuario : public Persona{
 
     private:
-        std::string usuario, password;
+        string user, password;
     public:
         Usuario();
-        Usuario(std::string,std::string);
+        Usuario(string,string);
         ~Usuario();
     
         //Setters
-        void setUsuario(std::string);
-        void setPassword(std::string);
+        void setUsuario(string);
+        void setPassword(string);
 
         //Getters
-        std::string getUsuario();
-        std::string getPassword();
+        string getUsuario();
+        string getPassword();
 };
 
 #endif

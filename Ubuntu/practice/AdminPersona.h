@@ -3,12 +3,13 @@
 
 #include "Usuario.h"
 #include <vector>
+using std::vector;
 #include <string>
 using std::string;
 
 class AdminPersona{
     private:
-        std::vector<Usuario*> listaUsuarios;
+        vector<Usuario*> listaUsuarios;
     public:
         //AdminPersona();
         ~AdminPersona();

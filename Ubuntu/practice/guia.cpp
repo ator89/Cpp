@@ -7,8 +7,11 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+void login();
+void signup();
+
 int main(){
-    Menu* menu;
+    
     int opcionMenu = -1;
     bool menu1 = true;
 
@@ -38,3 +41,14 @@ int main(){
     return 0;
 }
 
+void signup(){
+    string us, pwd;
+    AdminPersona* ap;
+    Persona* u = new Usuario();
+    cout << "Usuario: " << endl;
+    cin >> us;
+    cout << "Password: " << endl;
+    cin >> pwd;
+    //ap->addUsuario();
+     
+}

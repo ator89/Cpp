@@ -1,6 +1,7 @@
 #include "Persona.h"
 
 #include <string>
+using std::string;
 
 //Constructor
 Persona::Persona(){
@@ -11,15 +12,15 @@ Persona::Persona(){
 }
 
 //Setters
-void  Persona::setNombre(std::string nombre){
+void  Persona::setNombre(string nombre){
     this->nombre = nombre;
 }
 
-void Persona::setApellido(std::string apellido){
+void Persona::setApellido(string apellido){
     this->apellido = apellido;
 }
 
-void Persona::setEmail(std::string email){
+void Persona::setEmail(string email){
     this->email = email;
 }
 
@@ -28,15 +29,15 @@ void Persona::setId(int id){
 }
 
 //Getters
-std::string Persona::getNombre(){
+string Persona::getNombre(){
     return nombre;
 }
 
-std::string Persona::getApellido(){
+string Persona::getApellido(){
     return apellido;
 }
 
-std::string Persona::getEmail(){
+string Persona::getEmail(){
     return email;
 }
 

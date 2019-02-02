@@ -1,38 +1,41 @@
 #include "Usuario.h"
-
+#include <iostream>
+using std::cout;
+using std::endl;
 #include <string>
+using std::string;
 
 //Constructor 
 Usuario::Usuario(){
-    this->usuario = "";
+    this->user = "";
     this->password = "";    
 }
 
 //Constructor sobrecargado
-Usuario::Usuario(std::string usuario, std::string password){
-    this->usuario = usuario;
+Usuario::Usuario(string usuario, string password){
+    this->user = usuario;
     this->password = password;
 }
 
 //Setters
-void setUsuario(std::string usuario){
-    this->usuario = usuario;
+void Usuario::setUsuario(string usuario){
+    this->user = usuario;
 }
 
-void setPassword(std::string password){
+void Usuario::setPassword(string password){
     this->password = password;
 }
 
 //Getters
-std::string Usuario::getUsuario(){
-    return usuario;
+string Usuario::getUsuario(){
+    return this->user;
 }
 
-std::string Usuario::getPassword(){
-    return password;
+string Usuario::getPassword(){
+    return this->password;
 }
 
 //Destructor
 Usuario::~Usuario(){
-    std::cout << "Destruyendo usuario..." << endl;
+    cout << "Destruyendo usuario..." << endl;
 }
