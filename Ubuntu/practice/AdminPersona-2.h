@@ -18,7 +18,7 @@ class AdminPersona{
         //int posUsuario(std::string);
         void addUsuario(Usuario*);
         //void setListaUsuarios(std::vector<Usuario*>);
-        //std::vector<Usuario*> getListaUsuarios();
+        std::vector<Usuario*> getListaUsuarios();
         
 };
 
