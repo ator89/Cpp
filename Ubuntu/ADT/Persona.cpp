@@ -7,6 +7,12 @@ Persona::Persona(){
     apellido = "";
 }
 
+Persona::Persona(std::string _nombre, std::string _apellido, int _id){
+    nombre = _nombre;
+    apellido = _apellido;
+    id = _id;
+}
+
 //Destructor
 Persona::~Persona(){
 }

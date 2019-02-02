@@ -8,6 +8,7 @@ class Persona{
         std::string nombre, apellido;
     public:
         Persona();
+        Persona(std::string,std::string,int);
         ~Persona();
 
         void setId(int);
