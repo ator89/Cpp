@@ -6,10 +6,12 @@
 //  Copyright © 2019 Angel Torres. All rights reserved.
 //
 
+
 #include <iostream>
 using std::cout;
 using std::endl;
 
+/*
 int Add(int* a, int *b){
     cout << "Address of a in  Add = " << &a <<endl;
     cout << "Value in a of Add (address of a on main)= " << a <<endl;
@@ -31,8 +33,10 @@ int* Add3(int* a, int *b){
     (*c) = (*a) + (*b);
     return c;
 }
-
+*/
 int main(int argc, const char * argv[]) {
+    
+    /*
     int a = 2, b = 4;
     cout << "Address of a in main = " << &a << endl;
     int c = Add(&a,&b);
@@ -42,6 +46,20 @@ int main(int argc, const char * argv[]) {
     cout << "Suma = " << c << endl;
     cout << "Suma = " << *c2 << endl;
     cout << "Suma = " << *c3 << endl;
+    */
+    
+    int a;
+    int *p;
+    p = &a;
+    
+    cout << "Adress of P is " << p << endl;
+    cout << "Value at p is " << *p << endl;
+    
+    int b = 20;
+    *p = b;
+    
+    cout << "Adress of P is " << p << endl;
+    cout << "Value at p is " << *p << endl;
     
     return 0;
 }

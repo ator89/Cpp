@@ -1,14 +1,13 @@
 //
 //  lista.hpp
-//  Punteros
+//  Pointers
 //
-//  Created by Angel Torres on 1/27/19.
+//  Created by Angel Torres on 2/1/19.
 //  Copyright © 2019 Angel Torres. All rights reserved.
 //
 
 #ifndef lista_h
 #define lista_h
-
 
 #include <stdio.h>
 #include "nodo.h"
@@ -17,9 +16,13 @@ class Lista{
 private:
     Nodo* head;
 public:
-    void add(Nodo*, int);
-    void print();
-    
+    Lista();
+    ~Lista();
+
+    void add(int);
+    void addPos(int,int);
+    void delPos(int);
+    void impri();
     
 };
 

@@ -9,7 +9,7 @@
 #include "lista.h"
 
 void Lista::add(Nodo* node, int valor){
-    Nodo* temp = new Nodo();
+    //Nodo* temp = new Nodo();
     //temp->getData() = valor;
     //temp->getLink() = NULL;
     //if (node !=NULL)

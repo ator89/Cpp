@@ -5,7 +5,9 @@
 //  Created by Angel Torres on 1/25/19.
 //  Copyright © 2019 Angel Torres. All rights reserved.
 //
-/*
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -14,6 +16,9 @@ using std::endl;
 #include "nodo.h"
 #include <string>
 
+/*
+
+ 
 int main(int argc, const char * argv[]) {
     
     Nodo* nod = NULL;
@@ -43,9 +48,6 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 struct Node{
     int data;
@@ -147,6 +149,13 @@ void PrintPos()
 }
 
 int main(){
+    
+    int a; int *p;
+    a = 10;
+    p = &a;
+    cout << "Adress of P is " << p << endl;
+    
+    /*
     head = NULL; //empty list;
     
     InsertPos(2, 1);
@@ -157,7 +166,7 @@ int main(){
     PrintPos();
     
     
-    /*
+    
     printf("How many numbers");
     int i,n,x;
     scanf("%d", &n);
