@@ -19,6 +19,13 @@ void Tablero::fillMat(){
         for(int j = 0; j < size; j++){
             matriz[i][j] = 'x';
         }
+        for(int k = 0; k < i; k++){
+          matriz[i][k] = 'c';
+        }
+
+        for(int l = 0; l < 8; l++){
+            matriz[i][l] = 't';
+        }
     }
 }
 
@@ -34,7 +41,7 @@ void Tablero::printMat(){
 void Tablero::freeMat(){
     for(int i = 0; i < size; i++){
         delete[] matriz[i];
-        matriz = NULL;
+        matriz[i] = NULL;
     }
     delete[] matriz;
     matriz = NULL;

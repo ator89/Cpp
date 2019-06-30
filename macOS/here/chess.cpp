@@ -5,7 +5,7 @@ using std::cout;
 using std::cin;
 
 int main(){
-    Tablero* t;
+    Tablero* t = new Tablero();
     t->createMat();
     t->fillMat();
     t->printMat();
