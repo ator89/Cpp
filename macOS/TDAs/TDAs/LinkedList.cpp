@@ -1,78 +1,98 @@
 //
 //  LinkedList.cpp
-//  Majora
+//  TDAs
 //
-//  Created by Angel Torres on 3/29/19.
+//  Created by Angel Torres on 7/29/19.
 //  Copyright © 2019 Angel Torres. All rights reserved.
 //
 
 #include "LinkedList.h"
 #include <iostream>
 
-//Constructor
 LinkedList::LinkedList(){
     head = 0;
 }
-//Destructor
+
 LinkedList::~LinkedList(){
     if(head)
         delete head;
 }
 
-//At at the beginning of the list
-void LinkedList::add(int data){
+void LinkedList::insert(int data){
     Node* temp = new Node();
     temp->setData(data);
     temp->setLink(nullptr);
-    if( head != 0)
+    if(temp != nullptr)
         temp->setLink(head);
     head = temp;
 }
 
-//Add at x position
-void LinkedList::addAt(int data, int n){
+void LinkedList::insertAt(int data, int n){
     Node* temp1 = new Node();
     temp1->setData(data);
-    temp1->setLink(0);
-    if( n == 1 ){
+    temp1->setLink(nullptr);
+    if(n == 1){
         temp1->setLink(head);
         head = temp1;
         return;
     }
-    //Traverse nodes
     Node* temp2 = head;
-    for( int i = 0; i < n - 2; i++ ){
+    for(int i = 0; i < n-2; i++){
         temp2 = temp2->getLink();
     }
     temp1->setLink(temp2->getLink());
     temp2->setLink(temp1);
-
 }
 
-//Delete from the beginning of the list
-void LinkedList::remove(int x){
+void LinkedList::remove(int n){
     Node* temp1 = head;
-    if( x == 1 ){
+    if(n == 1){
         head = temp1->getLink();
         temp1->setLink(nullptr);
         delete temp1;
         return;
     }
-    //Traverse nodes
-    for( int i = 0; i < x - 2; i++ )
+    for(int i=0; i < n-2; i++){
         temp1 = temp1->getLink();
+    }
     Node* temp2 = temp1->getLink();
     temp1->setLink(temp2->getLink());
-    temp2->setLink(0);//Break link
+    temp2->setLink(nullptr);
     delete temp2;
 }
 
-//Print elements of the list
-void LinkedList::show(){
+void LinkedList::reverse(){
+    Node* next, *prev, *current;
+    prev = 0;
+    current = head;
+    while(current != nullptr){
+        next = current->getLink();
+        current->setLink(prev);
+        prev = current;
+        current = next;
+    }
+    head = prev;
+}
+
+void LinkedList::print(){
     Node* temp = head;
-    while( temp != 0 ){
+    while(temp != nullptr){
         std::cout << " " << temp->getData();
         temp = temp->getLink();
     }
+    std::cout<< "\n";
+}
+
+//print in reverse order
+void LinkedList::recur(Node* node){
+    if(node == nullptr)
+        return;
+    //std::cout << " " << node->getData(); //put this first to reverse
+    recur(node->getLink());
+    std::cout << " " << node->getData();//Reverse
+}
+
+void LinkedList::print2(){
+    recur(head);
     std::cout << "\n";
 }

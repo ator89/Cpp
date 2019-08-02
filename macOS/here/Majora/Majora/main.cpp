@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
     lista->show();// 9 2 7 4
     lista->addAt(6, 3);
     lista->show();// 9 2 6 7 4
-    lista->remove(5);
+    lista->remove(1);
     lista->show();// 2 6 7 4
     
     //cout << "Hello, World!\n";
